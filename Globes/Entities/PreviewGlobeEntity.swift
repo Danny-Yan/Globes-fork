@@ -37,7 +37,7 @@ class PreviewGlobeEntity: Entity {
             clearcoat: clearcoat
         )
         
-        let mesh: MeshResource = .generateSphere(radius: radius)
+        let mesh: MeshResource = .generateBox(size: radius, cornerRadius: 0.01)
         self.addChild(ModelEntity(mesh: mesh, materials: [material]))
         
         // react to user taps

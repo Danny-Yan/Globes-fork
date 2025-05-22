@@ -50,7 +50,7 @@ class GlobeEntity: Entity {
         )
         try Task.checkCancellation() // https://developer.apple.com/wwdc21/10134?time=723
         
-        let mesh: MeshResource = .generateSphere(radius: globe.radius)
+        let mesh: MeshResource = .generateBox(size: globe.radius)
         let modelEntity = ModelEntity(mesh: mesh, materials: [material])
         modelEntity.name = "Sphere"
         modelEntity.components.set(GroundingShadowComponent(castsShadow: true))
